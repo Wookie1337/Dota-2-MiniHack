@@ -1,0 +1,46 @@
+[2025-04-25 20:54:02] [DEBUG]	Searching for process: dota2.exe
+[2025-04-25 20:54:03] [INFO]	[+] Connected to dota2.exe (PID: 5272)
+[2025-04-25 20:54:03] [DEBUG]	[*] Loading process modules...
+[2025-04-25 20:54:03] [DEBUG]	[✓] Loaded module: client.dll
+[2025-04-25 20:54:03] [DEBUG]	[✓] Loaded module: engine2.dll
+[2025-04-25 20:54:03] [DEBUG]	[✓] Loaded module: panorama.dll
+[2025-04-25 20:54:03] [DEBUG]	[✓] Loaded module: particles.dll
+[2025-04-25 20:54:03] [INFO]	[✓] Memory interface initialized.
+[2025-04-25 20:54:03] [DEBUG]	[✓] Pattern found in client.dll at 0x7FFD27CBB8EA
+[2025-04-25 20:54:03] [INFO]	[✓] Camera initialized at address 0x7FFD2B7CA110
+[2025-04-25 20:54:06] [DEBUG]	[✓] Pattern found in particles.dll at 0x7FFD30EDBAA2
+[2025-04-25 20:54:06] [DEBUG]	[✓] Teleport control address resolved: 0x7FFD30EDBAA2
+[2025-04-25 20:54:09] [DEBUG]	[✓] Pattern found in client.dll at 0x7FFD27BDC3FF
+[2025-04-25 20:54:09] [DEBUG]	[✓] Weather control address resolved: 0x210B2341440
+[2025-04-25 20:54:41] [INFO]	Restoring default settings...
+[2025-04-25 20:54:58] [INFO]	Restoring default settings...
+[2025-04-25 20:56:05] [DEBUG]	Searching for process: dota2.exe
+[2025-04-25 20:56:05] [INFO]	[+] Connected to dota2.exe (PID: 5272)
+[2025-04-25 20:56:05] [DEBUG]	[*] Loading process modules...
+[2025-04-25 20:56:05] [DEBUG]	[✓] Loaded module: client.dll
+[2025-04-25 20:56:05] [DEBUG]	[✓] Loaded module: engine2.dll
+[2025-04-25 20:56:05] [DEBUG]	[✓] Loaded module: panorama.dll
+[2025-04-25 20:56:05] [DEBUG]	[✓] Loaded module: particles.dll
+[2025-04-25 20:56:05] [INFO]	[✓] Memory interface initialized.
+[2025-04-25 20:56:05] [DEBUG]	[✓] Pattern found in client.dll at 0x7FFD27CBB8EA
+[2025-04-25 20:56:05] [INFO]	[✓] Camera initialized at address 0x7FFD2B7CA110
+[2025-04-25 20:58:39] [INFO]	Restoring default settings...
+[2025-04-25 20:58:39] [DEBUG]	[✓] Pattern found in client.dll at 0x7FFD27BDC3FF
+[2025-04-25 20:58:39] [DEBUG]	[✓] Weather control address resolved: 0x210B2341440
+[2025-04-25 20:58:39] [DEBUG]	[✓] Pattern found in particles.dll at 0x7FFD30EDBAA2
+[2025-04-25 20:58:39] [DEBUG]	[✓] Teleport control address resolved: 0x7FFD30EDBAA2
+[2025-04-25 21:00:40] [DEBUG]	Searching for process: dota2.exe
+[2025-04-25 21:00:40] [INFO]	[+] Connected to dota2.exe (PID: 5272)
+[2025-04-25 21:00:40] [DEBUG]	[*] Loading process modules...
+[2025-04-25 21:00:40] [DEBUG]	[✓] Loaded module: client.dll
+[2025-04-25 21:00:40] [DEBUG]	[✓] Loaded module: engine2.dll
+[2025-04-25 21:00:40] [DEBUG]	[✓] Loaded module: panorama.dll
+[2025-04-25 21:00:40] [DEBUG]	[✓] Loaded module: particles.dll
+[2025-04-25 21:00:40] [INFO]	[✓] Memory interface initialized.
+[2025-04-25 21:00:40] [DEBUG]	[✓] Pattern found in client.dll at 0x7FFD27CBB8EA
+[2025-04-25 21:00:40] [INFO]	[✓] Camera initialized at address 0x7FFD2B7CA110
+[2025-04-25 21:05:22] [DEBUG]	[✓] Pattern found in particles.dll at 0x7FFD30EDBAA2
+[2025-04-25 21:05:22] [DEBUG]	[✓] Teleport control address resolved: 0x7FFD30EDBAA2
+[2025-04-25 21:05:25] [DEBUG]	[✓] Pattern found in client.dll at 0x7FFD27BDC3FF
+[2025-04-25 21:05:25] [DEBUG]	[✓] Weather control address resolved: 0x210B2341440
+[2025-04-25 21:05:53] [INFO]	Restoring default settings...
