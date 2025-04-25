@@ -1,17 +1,6 @@
-# Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[cod]
+*.pyc
+*.log
+.vscode/
 *.pyo
 *.pyd
-
-# Logs
-*.log
-
-# VS Code settings
-.vscode/
-
-# PyQt Designer cache
-*.ui~
-
-# Other
-*.db
