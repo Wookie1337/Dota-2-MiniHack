@@ -1,5 +1,6 @@
 from enum import IntEnum
 
+
 class Weather(IntEnum):
     DEFAULT = 0
     SNOW = 1
@@ -14,5 +15,6 @@ class Weather(IntEnum):
 
     def __str__(self) -> str:
         return self.name.capitalize()
+
 
 WEATHER_LABELS = {weather.value: str(weather) for weather in Weather}

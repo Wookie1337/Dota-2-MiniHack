@@ -21,16 +21,21 @@ class Ui_MainWindow(object):
         MainWindow.setTabletTracking(False)
         MainWindow.setFocusPolicy(QtCore.Qt.TabFocus)
         MainWindow.setWindowFlags(
-            MainWindow.windowFlags() & ~QtCore.Qt.WindowMinimizeButtonHint | QtCore.Qt.WindowStaysOnTopHint
+            MainWindow.windowFlags() & ~QtCore.Qt.WindowMinimizeButtonHint
+            | QtCore.Qt.WindowStaysOnTopHint
         )
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.tabWidget = QtWidgets.QTabWidget(self.centralwidget)
         self.tabWidget.setGeometry(QtCore.QRect(0, 0, 400, 350))
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum)
+        sizePolicy = QtWidgets.QSizePolicy(
+            QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Minimum
+        )
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.tabWidget.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(
+            self.tabWidget.sizePolicy().hasHeightForWidth()
+        )
         self.tabWidget.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setStyleStrategy(QtGui.QFont.PreferAntialias)
@@ -289,27 +294,72 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Dota 2 MiniHack"))
-        self.cameraLabel.setText(_translate("MainWindow", "Distance (Value: 1200)"))
-        self.fovLabel.setText(_translate("MainWindow", "FOV (Value: 70)"))
-        self.farzLabel.setText(_translate("MainWindow", "FarZ (Value: -1)"))
-        self.fogButton.setText(_translate("MainWindow", "Toggle fog (Value: False)"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.cameraTab), _translate("MainWindow", "Camera"))
-        self.weatherIDLabel.setText(_translate("MainWindow", "Weather (Value: Default)"))
-        self.toggleTeleportsButton.setText(_translate("MainWindow", "Toggle Show Teleports (Value: False)"))
-        self.resetButton.setText(_translate("MainWindow", "Reset ALL"))
-        self.label.setText(_translate("MainWindow", "Default values"))
-        self.label_2.setText(_translate("MainWindow", "Made by Wookie1337"))
-        self.label_3.setText(_translate("MainWindow", "Camera distance: 1200"))
-        self.label_4.setText(_translate("MainWindow", "Camera FOV: 70"))
-        self.label_5.setText(_translate("MainWindow", "Camera FarZ: -1"))
-        self.label_6.setText(_translate("MainWindow", "Toggle fog: False"))
-        self.label_7.setText(_translate("MainWindow", "Weather: Default"))
-        self.label_8.setText(_translate("MainWindow", "Toggle Teleports: False"))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.otherTab), _translate("MainWindow", "Other"))
+        self.cameraLabel.setText(
+            _translate(
+                "MainWindow", "Distance (Value: 1200)"
+            )
+        )
+        self.fovLabel.setText(
+            _translate(
+                "MainWindow", "FOV (Value: 70)"
+            )
+        )
+        self.farzLabel.setText(
+            _translate(
+                "MainWindow", "FarZ (Value: -1)"
+            )
+        )
+        self.fogButton.setText(
+            _translate(
+                "MainWindow", "Toggle fog (Value: False)"
+            )
+        )
+        self.tabWidget.setTabText(
+            self.tabWidget.indexOf(self.cameraTab),
+            _translate("MainWindow", "Camera")
+        )
+        self.weatherIDLabel.setText(
+            _translate("MainWindow", "Weather (Value: Default)")
+        )
+        self.toggleTeleportsButton.setText(
+            _translate("MainWindow", "Toggle Show Teleports (Value: False)")
+        )
+        self.resetButton.setText(
+            _translate("MainWindow", "Reset ALL")
+        )
+        self.label.setText(
+            _translate("MainWindow", "Default values")
+        )
+        self.label_2.setText(
+            _translate("MainWindow", "Made by Wookie1337")
+        )
+        self.label_3.setText(
+            _translate("MainWindow", "Camera distance: 1200")
+        )
+        self.label_4.setText(
+            _translate("MainWindow", "Camera FOV: 70")
+        )
+        self.label_5.setText(
+            _translate("MainWindow", "Camera FarZ: -1")
+        )
+        self.label_6.setText(
+            _translate("MainWindow", "Toggle fog: False")
+        )
+        self.label_7.setText(
+            _translate("MainWindow", "Weather: Default")
+        )
+        self.label_8.setText(
+            _translate("MainWindow", "Toggle Teleports: False")
+        )
+        self.tabWidget.setTabText(
+            self.tabWidget.indexOf(self.otherTab),
+            _translate("MainWindow", "Other")
+        )
 
 
 if __name__ == "__main__":
     import sys
+
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()

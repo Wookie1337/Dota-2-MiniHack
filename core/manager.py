@@ -6,15 +6,13 @@ import logging
 
 logger = logging.getLogger("dota_minihack")
 
+
 class DotaManager:
     def __init__(self) -> None:
         self.memory = Memory("dota2.exe")
         self.camera = DotaCamera(self.memory)
         self.other = DotaOther(self.memory)
-        self.states = {
-            "fog_enabled": True,
-            "show_teleports": False
-        }
+        self.states = {"fog_enabled": True, "show_teleports": False}
 
     def set_camera_distance(self, distance: float) -> None:
         self.camera.set_distance(distance)

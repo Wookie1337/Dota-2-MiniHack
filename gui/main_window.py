@@ -4,6 +4,7 @@ from core.manager import DotaManager
 from data.weather import Weather, WEATHER_LABELS
 import keyboard
 
+
 class MainWindow(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
@@ -24,7 +25,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.toggleTeleportsButton.clicked.connect(self.on_teleports_toggled)
         self.resetButton.clicked.connect(self.reset_to_default)
 
-
     def on_camera_slider_changed(self, value):
         self.cameraLabel.setText(f"Distance (Value: {value})")
         self.manager.set_camera_distance(float(value))
@@ -38,19 +38,24 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.manager.set_camera_farz(float(value))
 
     def on_weather_changed(self, value):
-        self.weatherIDLabel.setText(f"Weather (Value: {WEATHER_LABELS[value]})")
+        self.weatherIDLabel.setText(
+            f"Weather (Value: {WEATHER_LABELS[value]})"
+        )
         self.manager.set_weather(Weather(value))
 
     def on_fog_toggled(self):
         self.manager.toggle_fog()
         value = self.manager.states["fog_enabled"]
-        self.fogButton.setText(f"Toggle fog (Value: {not value})")
+        self.fogButton.setText(
+            f"Toggle fog (Value: {not value})"
+        )
 
     def on_teleports_toggled(self):
         self.manager.toggle_teleports()
         value = self.manager.states["show_teleports"]
-        self.toggleTeleportsButton.setText(f"Toggle Show Teleports (Value: {value})")
-
+        self.toggleTeleportsButton.setText(
+            f"Toggle Show Teleports (Value: {value})"
+        )
 
     def reset_to_default(self):
         self.manager.restore_defaults()

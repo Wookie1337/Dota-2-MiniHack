@@ -1,11 +1,11 @@
 import logging
-from typing import Optional
+
 
 def setup_logger(
     name: str = "dota_minihack",
     log_file: str = "cheatlog.log",
     console_level: int = logging.ERROR,
-    file_level: int = logging.DEBUG
+    file_level: int = logging.DEBUG,
 ) -> logging.Logger:
     logger = logging.getLogger(name)
     logger.setLevel(logging.DEBUG)

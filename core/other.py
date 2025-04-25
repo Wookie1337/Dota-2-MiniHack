@@ -29,13 +29,17 @@ class DotaOther:
             absolute = self.memory.get_absolute_address(
                 instr_ptr=base + DATA["cl_weather"]["sig_offset"],
                 offset=DATA["cl_weather"]["offset"],
-                size=DATA["cl_weather"]["size"]
+                size=DATA["cl_weather"]["size"],
             )
             address = self.memory.process.read_ulonglong(absolute) + 0x40
-            logger.debug(f"[✓] Weather control address resolved: 0x{address:X}")
+            logger.debug(
+                msg=f"[✓] Weather control address resolved: 0x{address:X}"
+            )
             return address
-        except Exception as e:
-            logger.exception("[!] Failed to resolve weather address.")
+        except Exception:
+            logger.exception(
+                msg="[!] Failed to resolve weather address."
+            )
             return None
 
     def _resolve_teleport_address(self) -> Optional[int]:
@@ -68,7 +72,7 @@ class DotaOther:
             if not address:
                 return False
 
-        #logger.debug(f"Setting weather to ID: {weather_id}")
+        # logger.debug(f"Setting weather to ID: {weather_id}")
         return self.memory.process.write_int(self._data["weather"], weather_id)
 
     @Memory.check_write
@@ -83,5 +87,9 @@ class DotaOther:
                 return False
 
         value = 0x8E80 if enabled else 0xA680
-        #logger.debug(f"Setting show teleports {'enabled' if enabled else 'disabled'} (value: 0x{value:X})")
+        # logger.debug(
+        #     f"Setting show teleports "
+        #     "{'enabled' if enabled else 'disabled'} "
+        #     "(value: 0x{value:X})"
+        # )
         return self.memory.process.write_short(self._data["teleports"], value)
