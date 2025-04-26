@@ -9,7 +9,12 @@ logger = logging.getLogger("dota_minihack")
 
 class DotaManager:
     def __init__(self) -> None:
-        self.memory = Memory("dota2.exe")
+        try:
+            self.memory = Memory("dota2.exe")
+        except RuntimeError as e:
+            logger.error(f"[X] Error: {e}")
+            return
+
         self.camera = DotaCamera(self.memory)
         self.other = DotaOther(self.memory)
         self.states = {"fog_enabled": True, "show_teleports": False}

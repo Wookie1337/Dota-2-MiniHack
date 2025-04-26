@@ -1,6 +1,7 @@
 import time
 import logging
 from typing import Optional, Callable, Union
+from utils.helpers import is_admin
 
 import pymem
 import pymem.process
@@ -42,14 +43,19 @@ class Memory:
                     try:
                         self.process = pymem.Pymem(exe_name)
                         logger.info(
-                            "[+] Connected to {exe_name} "
+                            f"[+] Connected to {exe_name} "
                             f"(PID: {self.process.process_id})"
                         )
                         return
                     except Exception as e:
-                        logger.exception(
-                            f"[!] Error attaching to process: {e}"
-                        )
+                        if not is_admin():
+                            logger.exception(
+                                "Run the program as an administrator!"
+                            )
+                        else:
+                            logger.exception(
+                                f"[!] Error attaching to process: {e}"
+                            )
             time.sleep(1)
 
     def _load_modules(self) -> None:
