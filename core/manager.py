@@ -36,6 +36,8 @@ class DotaManager:
 
     def restore_defaults(self) -> None:
         logger.info("Restoring default settings...")
+        
+        self.states = {"fog_enabled": True, "show_teleports": False}
         self.camera.set_distance()
         self.camera.set_fov()
         self.camera.set_farz()

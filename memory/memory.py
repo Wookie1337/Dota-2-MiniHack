@@ -34,7 +34,6 @@ class Memory:
         return True
 
     def _connect_to_process(self, exe_name: str) -> None:
-        print(f"Searching for process: {exe_name}")
         logger.debug(f"Searching for process: {exe_name}")
 
         while self.process is None:
@@ -60,7 +59,7 @@ class Memory:
             "panorama.dll",
             "particles.dll",
         ]
-        print("[*] Loading process modules...")
+
         logger.debug("[*] Loading process modules...")
 
         for name in required_modules:
