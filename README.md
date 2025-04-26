@@ -31,8 +31,8 @@ A lightweight cheat utility for Dota 2 that provides various visual enhancements
 ### Setup
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/dota_minihack.git
-cd dota_minihack
+git clone https://github.com/Wookie1337/Dota-2-MiniHack.git
+cd Dota-2-MiniHack
 ```
 2. Install dependencies:
 ```bash

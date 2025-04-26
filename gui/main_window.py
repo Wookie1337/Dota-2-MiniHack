@@ -13,6 +13,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.manager = DotaManager()
 
         self.bind_events()
+        
         keyboard.add_hotkey("insert", self.toggle_menu, suppress=True)
 
     def bind_events(self):
@@ -44,18 +45,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.manager.set_weather(Weather(value))
 
     def on_fog_toggled(self):
-        self.manager.toggle_fog()
         value = self.manager.states["fog_enabled"]
         self.fogButton.setText(
             f"Toggle fog (Value: {not value})"
         )
+        self.manager.toggle_fog()
 
     def on_teleports_toggled(self):
-        self.manager.toggle_teleports()
         value = self.manager.states["show_teleports"]
         self.toggleTeleportsButton.setText(
             f"Toggle Show Teleports (Value: {value})"
         )
+        self.manager.toggle_teleports()
 
     def reset_to_default(self):
         self.manager.restore_defaults()
